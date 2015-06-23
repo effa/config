@@ -1,3 +1,25 @@
+" noncompatible with vi
+set nocompatible
+
+" ==========================================================
+"  Vundle
+" ==========================================================
+
+filetype off  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 
 " ==========================================================
 "  Basic Settings
@@ -9,8 +31,6 @@ syntax on
 " umoznit nacteni odsazovaciho souboru pro dany typ souboru
 filetype plugin indent on
 
-" noncompatible with vi (necessary for a lot of cool things in vim)
-set nocompatible
 
 " disable backup and swap files
 set nobackup
@@ -32,7 +52,7 @@ set shiftround          " rounds indent to a multiple of shiftwidth
 set smarttab            " Handle tabs more intelligently
 
 " copying and pasting
-" set clipboard=unnamedplus  " use system clipboard for pasting
+set clipboard=unnamedplus  " use system clipboard for pasting
 
 " when a tab is closed, remove the buffer
 set nohidden
@@ -72,6 +92,9 @@ set numberwidth=2       " using at least 2 columns (+ 1 space) for number column
 
 " zvyraznit aktualni radek
 set cursorline
+
+" automatically reload .vimrc on save
+autocmd! bufwritepost _vimrc source %
 
 " ==========================================================
 "  Mappings
@@ -118,3 +141,37 @@ nnoremap <CR>  :noh<CR>
 " ==========================================================
 
 nmap <leader>i :set list!<CR>
+
+" ==========================================================
+"  NerdTree
+" ==========================================================
+map <C-n> :NERDTreeToggle<CR>
+
+" ==========================================================
+"  Syntastic
+" ==========================================================
+
+" Python Checkers
+let g:syntastic_python_checkers = ['pylint2']
+
+" write errors to loc list
+"let g:syntastic_always_populate_loc_list = 1
+
+" automaticky skok na prvni nalezenou chybu
+" let g:syntastic_auto_jump=1
+
+" jump to next error
+map <leader>e :lnext<CR>
+
+" jump to previous error
+map <leader>p :lprev<CR>
+
+" ignorovat nektere chyby
+" F403 = 'from neco import *' used
+" E265 = block comment should start with '# '
+" E501 = line too long
+let g:syntastic_python_flake8_args = '--ignore="F403,E128,E265,E501"'
+
+" error messages filtering
+let g:syntastic_rst_rst2pseudoxml_quiet_messages = {"regex": "Unknown directive type"}
+
