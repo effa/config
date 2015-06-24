@@ -149,8 +149,8 @@ bar {
     output HDMI1
     output HDMI2
     position bottom
-    status_command i3status
-    #status_command i3status --config ~/.i3/i3status-large.conf
+    #status_command i3status
+    status_command i3status --config ~/dotfiles/_i3_status.conf
     colors {
         background #2D261D
         statusline #BBBBBB
@@ -161,8 +161,8 @@ bar {
 bar {
     output eDP1
     position bottom
-    status_command i3status
-    #status_command i3status --config ~/.i3/i3status-large.conf
+    #status_command i3status
+    status_command i3status --config ~/dotfiles/_i3_status.conf
     colors {
         background #2D261D
         statusline #CCCCCC
