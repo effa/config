@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,9 +91,6 @@ set virtualedit=block
 set number              " display line numbers
 set numberwidth=2       " using at least 2 columns (+ 1 space) for number column
 
-" zvyraznit aktualni radek
-set cursorline
-
 " automatically reload .vimrc on save
 autocmd! bufwritepost _vimrc source %
 
@@ -141,6 +139,18 @@ nnoremap <CR>  :noh<CR>
 " ==========================================================
 
 nmap <leader>i :set list!<CR>
+
+" ==========================================================
+"  Solarized + theme options
+" ==========================================================
+set background=light
+colorscheme solarized
+
+" highlight current line
+set cursorline
+
+" toggle light and dark background with F4
+call togglebg#map("<F4>")
 
 " ==========================================================
 "  NerdTree
