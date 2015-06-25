@@ -111,12 +111,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session)
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-msg exit"
-# TODO:
-# bindsym $mod+Shift+e exec ~/.i3/i3-exit
-# for_window [class="I3-exit" instance="i3-exit"] floating enable
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -190,19 +184,6 @@ bindsym $mod+Shift+o move scratchpad
 bindsym $mod+o scratchpad show
 
 
-# --------- applications key bindings -------------
-
-# binding for gmrun
-bindsym $mod+p exec --no-startup-id gmrun
-
-# binding for chrome
-bindsym $mod+g exec --no-startup-id chromium
-#bindsym $mod+g exec --no-startup-id google-chrome
-
-# lock
-bindsym $mod+z  exec i3lock -d -c 000000
-
-
 # --------- special keys -------------
 
 # print screen
@@ -217,6 +198,54 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute
 bindsym XF86MonBrightnessUp exec xbacklight +10
 bindsym XF86MonBrightnessDown exec xbacklight -10
 
+# -------------- system commands ------------------
+
+# system menu
+set $SYSMENU "[l] Lock, [e] Logout, [r] Reboot, [u] Suspend, [h] Hibernate, [s] Shutdown"
+bindsym Control+$alt+e mode $SYSMENU
+mode $SYSMENU {
+    bindsym l       exec --no-startup-id euclid-lock
+    bindsym e       exec --no-startup-id euclid-logout
+    bindsym r       exec --no-startup-id euclid-reboot
+    bindsym u       exec --no-startup-id euclid-hibernate
+    bindsym h       exec --no-startup-id euclid-suspend
+    bindsym s       exec --no-startup-id euclid-shutdown
+    bindsym Return  mode "default"
+    bindsym Escape  mode "default"
+}
+
+# toggle screen on/off
+#bindsym $alt+F11 exec --no-startup-id sleep 1; xset dpms force off
+#bindsym $alt+F12 exec --no-startup-id xset dpms force on
+
+# --------- applications key bindings -------------
+
+# binding for gmrun
+bindsym $mod+p exec --no-startup-id gmrun
+
+# chromium
+bindsym $alt+g exec --no-startup-id chromium
+#bindsym $mod+g exec --no-startup-id google-chrome
+
+# zathura (pdf)
+bindsym $alt+z exec --no-startup-id zathura
+
+# application menu
+set $MENU "Chromium Gvim Irfanview Libreoffice Ranger Skype Vlc Zathura"
+bindsym $mod+m mode $MENU
+mode $MENU {
+    bindsym c exec chromium, mode "default"
+    bindsym g exec gvim, mode "default"
+    bindsym i exec irfanview,mode "default"
+    bindsym l exec libreoffice, mode "default"
+    bindsym v exec vlc, mode "default"
+    bindsym s exec skype, mode "default"
+    bindsym z exec zathura, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# bindsym r exec terminator --profile ranger, mode "default"
+
 # ------------- after start -------------------
 
 # network manager
@@ -225,18 +254,3 @@ exec --no-startup-id nm-applet
 # terminal
 # exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal'
 
-# --------- application menu -------------
-
-set $MENU "Chromium Gvim Irfanview Libreoffice Ranger Skype Vlc"
-bindsym $mod+m mode $MENU
-mode $MENU {
-bindsym c exec chromium, mode "default"
-bindsym g exec gvim, mode "default"
-bindsym i exec irfanview,mode "default"
-bindsym l exec libreoffice, mode "default"
-bindsym v exec vlc, mode "default"
-bindsym s exec skype, mode "default"
-bindsym Return mode "default"
-bindsym Escape mode "default"
-}
-# bindsym r exec terminator --profile ranger, mode "default"
