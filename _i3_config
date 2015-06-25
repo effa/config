@@ -204,12 +204,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 set $SYSMENU "[l] Lock, [e] Logout, [r] Reboot, [u] Suspend, [h] Hibernate, [s] Shutdown"
 bindsym Control+$alt+e mode $SYSMENU
 mode $SYSMENU {
-    bindsym l       exec --no-startup-id euclid-lock
-    bindsym e       exec --no-startup-id euclid-logout
-    bindsym r       exec --no-startup-id euclid-reboot
-    bindsym u       exec --no-startup-id euclid-hibernate
-    bindsym h       exec --no-startup-id euclid-suspend
-    bindsym s       exec --no-startup-id euclid-shutdown
+    bindsym l       exec --no-startup-id i3lock -d -c 000000, mode "default"
+    bindsym e       exec --no-startup-id i3-msg exit
+    bindsym r       exec --no-startup-id systemctl reboot
+    bindsym u       exec --no-startup-id i3lock && sleep 1; systemctl suspend
+    bindsym h       exec --no-startup-id i3lock && sleep 1; systemctl hibernate
+    bindsym s       exec --no-startup-id shutdown -h now
     bindsym Return  mode "default"
     bindsym Escape  mode "default"
 }
