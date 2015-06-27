@@ -221,31 +221,44 @@ mode $SYSMENU {
 
 # --------- applications key bindings -------------
 
-# binding for gmrun
-bindsym $mod+p exec --no-startup-id gmrun
+# gmrun
+bindsym $mod+p exec gmrun
 
 # chromium
-bindsym $alt+g exec --no-startup-id chromium
-#bindsym $mod+g exec --no-startup-id google-chrome
-
-# zathura (pdf)
-bindsym $alt+z exec --no-startup-id zathura
+bindsym $alt+c exec chromium
+# gvim (text editor)
+bindsym $alt+g exec gvim
+# ristretto (image viewer)
+bindsym $alt+i exec ristretto
+# libre office
+bindsym $alt+l exec libreoffice
+# ranger (terminal file manager)
+bindsym $alt+r exec gnome-terminal -x sh -c "ranger"
+# skype
+bindsym $alt+s exec skype
+# thunar (file manager)
+bindsym $alt+t exec thunar
+# VLC (video player)
+bindsym $alt+v exec vlc
+# zathura (pdf viewer)
+bindsym $alt+z exec zathura
 
 # application menu
-set $MENU "Chromium Gvim Irfanview Libreoffice Ranger Skype Vlc Zathura"
+set $MENU "Chromium Gvim rIstretto Libreoffice Ranger Skype Thunar Vlc Zathura"
 bindsym $mod+m mode $MENU
 mode $MENU {
     bindsym c exec chromium, mode "default"
     bindsym g exec gvim, mode "default"
-    bindsym i exec irfanview,mode "default"
+    bindsym i exec ristretto, mode "default"
     bindsym l exec libreoffice, mode "default"
-    bindsym v exec vlc, mode "default"
+    bindsym r exec gnome-terminal -x sh -c "ranger", mode "default"
     bindsym s exec skype, mode "default"
+    bindsym t exec thunar, mode "default"
+    bindsym v exec vlc, mode "default"
     bindsym z exec zathura, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-# bindsym r exec terminator --profile ranger, mode "default"
 
 # ------------- after start -------------------
 
