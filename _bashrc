@@ -45,10 +45,10 @@ bind Space:magic-space
 #    export PATH
 #fi
 
-## virtualenvwrapper
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/Documents/projects
-#source /usr/local/bin/virtualenvwrapper.sh
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+source /usr/bin/virtualenvwrapper.sh
 
 # prompt settings
 PS1='[\u@\h \W]\$ '
