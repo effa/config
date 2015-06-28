@@ -31,9 +31,9 @@ shopt -s histappend
 HISTSIZE=5000
 HISTFILESIZE=10000
 
-## check the window size after each command and, if necessary,
-## update the values of LINES and COLUMNS.
-# shopt -s checkwinsize
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS
+ shopt -s checkwinsize
 
 # space expansion magic
 # e.g. !echo<space> expands to the last command starting with "echo"

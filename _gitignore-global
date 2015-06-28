@@ -1,0 +1,27 @@
+# backup and autosave files
+*~
+*.bak
+*.swp
+
+# Python, C, etc.
+*.pyc
+*.o
+*.obj
+
+# PDF and similar
+*.dvi
+*.ps
+*.pdf
+
+# TeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# BiBLaTeX auxiliary files
+*.bbl
+*.blg
+*.bcf
+*.run.xml
