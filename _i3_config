@@ -226,6 +226,8 @@ bindsym $mod+p exec gmrun
 
 # chromium
 bindsym $alt+c exec chromium
+# dropbox
+bindsym $alt+d exec dropbox
 # gvim (text editor)
 bindsym $alt+g exec gvim
 # ristretto (image viewer)
@@ -244,10 +246,11 @@ bindsym $alt+v exec vlc
 bindsym $alt+z exec zathura
 
 # application menu
-set $MENU "Chromium Gvim rIstretto Libreoffice Ranger Skype Thunar Vlc Zathura"
+set $MENU "Chromium Dropbox Gvim rIstretto Libreoffice Ranger Skype Thunar Vlc Zathura"
 bindsym $mod+m mode $MENU
 mode $MENU {
     bindsym c exec chromium, mode "default"
+    bindsym d exec dropbox, mode "default"
     bindsym g exec gvim, mode "default"
     bindsym i exec ristretto, mode "default"
     bindsym l exec libreoffice, mode "default"
@@ -267,4 +270,3 @@ exec --no-startup-id nm-applet
 
 # terminal
 # exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal'
-
