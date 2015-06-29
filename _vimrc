@@ -72,7 +72,8 @@ set wrap
 set linebreak
 " auto-wrap comments (c), allow formatting command gq (q),
 " remove comment leader when joint two comment lines (j)
-set formatoptions=cqj
+autocmd BufNewFile,BufRead * setlocal formatoptions=cqj
+" note: it is necessary to set it this way, otherwise it would be overwriten
 
 " copying and pasting
 set clipboard=unnamedplus  " use system clipboard for pasting
