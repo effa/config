@@ -28,7 +28,7 @@ call vundle#end()
 " ==========================================================
 
 " set correct filetypes
-autocmd BufRead,BufNewFile *.md,*markdown
+autocmd BufRead,BufNewFile *.txt,*.md,*markdown,TODO
         \ setlocal filetype=markdown
 
 " syntax highlighting
