@@ -1,3 +1,7 @@
+# local and temporary files
+local/
+temp/
+
 # backup and autosave files
 *~
 *.bak
