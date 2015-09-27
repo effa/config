@@ -225,6 +225,8 @@ mode $SYSMENU {
 # gmrun
 bindsym $mod+p exec gmrun
 
+# anki
+bindsym $alt+a exec anki
 # chromium
 bindsym $alt+c exec chromium
 # dropbox
@@ -247,14 +249,16 @@ bindsym $alt+v exec vlc
 bindsym $alt+z exec zathura
 
 # application menu
-set $MENU "Chromium Dropbox Gvim rIstretto Libreoffice Ranger Skype Thunar Vlc Zathura"
+set $MENU "Anki Chromium Dropbox Gvim rIstretto Libreoffice Netbeans Ranger Skype Thunar Vlc Zathura"
 bindsym $mod+m mode $MENU
 mode $MENU {
+    bindsym a exec anki, mode "default"
     bindsym c exec chromium, mode "default"
     bindsym d exec dropbox, mode "default"
     bindsym g exec gvim, mode "default"
     bindsym i exec ristretto, mode "default"
     bindsym l exec libreoffice, mode "default"
+    bindsym n exec netbeans, mode "default"
     bindsym r exec gnome-terminal -x sh -c "ranger", mode "default"
     bindsym s exec skype, mode "default"
     bindsym t exec thunar, mode "default"
@@ -271,3 +275,7 @@ exec --no-startup-id nm-applet
 
 # terminal
 # exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal'
+
+
+# ------------- background -------------------
+exec --no-startup-id xsetroot -solid "#112233"

@@ -53,3 +53,4 @@ source /usr/bin/virtualenvwrapper.sh
 # prompt settings
 PS1='[\u@\h \W]\$ '
 #. ~/.liquidprompt/liquidprompt
+#. liquidprompt

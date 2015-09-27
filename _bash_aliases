@@ -8,8 +8,11 @@ alias projector-off='xrandr --output VGA1 --off'
 alias todo='vim ~/TODO'
 alias nowtodo='vim TODO'
 
+# projects
+alias mkvirtualenv2='mkvirtualenv --python /usr/bin/python2.7'
+
 # printing
-alias tisk='lpr -P HP_LaserJet_1018_2'
+alias tisk='lpr -P HP_LaserJet_1018'
 
 # system commands
 alias euclid-shutdown='systemctl poweroff'
@@ -25,3 +28,6 @@ alias aisa='ssh xeffenb1@aisa.fi.muni.cz'
 #alias mount-aurora='sshfs xeffenb1@aurora.fi.muni.cz:/home/xeffenb1 /home/tom/aurora-home'
 #alias unmount-aurora='fusermount -u ~/aurora-home'
 #alias lazy-unmount-aurora='sudo umount -l ~/aurora-home'
+
+# time
+alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
