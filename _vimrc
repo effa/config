@@ -17,8 +17,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-fugitive'
+"Plugin 'lambdatoast/elm.vim'
 "Plugin 'jmcantrell/vim-virtualenv'
 
 call vundle#end()
@@ -58,7 +62,7 @@ set shiftwidth=2
 " width of space used by <TAB> and <BS> keys
 set softtabstop=2
 " use 4 spaces for indentation in source codes of some languages
-autocmd FileType python,java,c setlocal softtabstop=4 shiftwidth=4
+autocmd FileType python,java,c,elm setlocal softtabstop=4 shiftwidth=4
 " round indent to a multiple of shiftwidth
 set shiftround
 " handle tabs more intelligently
@@ -147,8 +151,18 @@ nnoremap i :noh<CR>i
 nnoremap <CR>  :noh<CR>
 
 "Experimental : very magic search by defaut
-:nnoremap / /\v
-:cnoremap %s/ %s/\v
+nnoremap / /\v
+cnoremap %s/ %s/\v
+
+" ==========================================================
+"  Spell check
+" ==========================================================
+
+" switch on/off by set spell / set nospell
+" jump to next error: ]s
+" add word to dictionary: zg (or 2zg to czech dictionary)
+set spelllang=en,cs
+set spellfile=~/.vim/spell/en.utf-8.add,~/.vim/spell/cs.utf-8.add
 
 " ==========================================================
 "  Mappings
@@ -222,7 +236,7 @@ let g:airline_symbols.branch = ''
 "let g:airline_symbols.whitespace = 'Ξ'
 
 " use solarized color theme
-let g:airline_theme = 'sol'
+let g:airline_theme = 'solarized'
 
 " top line (for tabs and buffers)
 let g:airline#extensions#tabline#enabled = 1
@@ -250,27 +264,34 @@ map <C-n> :NERDTreeToggle<CR>
 "  Syntastic
 " ==========================================================
 
-" Python Checkers
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = 'E'
+let g:syntastic_style_error_symbol = 'e'
+let g:syntastic_warning_symbol = 'W'
+let g:syntastic_style_warning_symbol = 'w'
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['eslint']
+" use local eslint if it exists
+if executable('./node_modules/.bin/eslint')
+  let b:syntastic_javascript_eslint_exec = './node_modules/.bin/eslint'
+endif
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": ["python", "javascript"] }
+map ]l :lnext<CR>
+map [l :lprevious<CR>
+  " if there is only 1 error, :ll can be used to jump on the corresponding line
 
-" write errors to loc list
-"let g:syntastic_always_populate_loc_list = 1
-" location list can be populated explicitly by :Errors
 
-" jump automatically to first error
-" let g:syntastic_auto_jump=1
-
-" jump to next error
-map <leader>e :lnext<CR>
-
-" jump to previous error
-map <leader>p :lprev<CR>
-
-" ignore some messages (note: can be set in ~/.pylintrc)
-" F403 = 'from foo import *' used
-" E265 = block comment should start with '# '
-" E501 = line too long
-"let g:syntastic_python_pylint_args = '--disable="F403,E265,E501"'
-
-"" messages filtering
-"let g:syntastic_rst_rst2pseudoxml_quiet_messages = {"regex": "Unknown directive type"}
+" ==========================================================
+"  Snippets
+" ==========================================================
+" reserved shortucuts: <C-q|w|e|r>
+let g:UltiSnipsExpandTrigger="<C-e>"
+let g:UltiSnipsJumpForwardTrigger="<C-w>"
+let g:UltiSnipsJumpBackwardTrigger="<C-q>"
+let g:UltiSnipsListSnippets="<C-r>"  " works only in insert-mode
+let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]

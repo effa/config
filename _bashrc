@@ -1,8 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# add ~/bin to path
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.npm-global/bin:/root/.gem/ruby/2.3.0/bin:$HOME/.gem/ruby/2.3.0/bin
+
+
 
 # vim as default editor
 export EDITOR="vim"
@@ -33,7 +34,7 @@ HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS
- shopt -s checkwinsize
+shopt -s checkwinsize
 
 # space expansion magic
 # e.g. !echo<space> expands to the last command starting with "echo"
@@ -47,10 +48,16 @@ bind Space:magic-space
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
+export PROJECT_HOME=$HOME/gdrive/projects
 source /usr/bin/virtualenvwrapper.sh
 
+#__GIT_STATUS='$(es=$?;__git_ps1|sed "s/ \(.\+\)/\1 /";exit $es)'
+#_RETVAL='$(es=$?; if [ $es -ne 0 ]; then echo "$es "; fi)'
+#PS1="[\u@\h \W] ${_GIT_STATUS}${_RETVAL}\$ "
+# NOTE: user, pc and full path are shown in window title bar
+source /usr/share/git/completion/git-prompt.sh
+PS1='\W$(__git_ps1 ":%s")\$ '
 # prompt settings
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 #. ~/.liquidprompt/liquidprompt
 #. liquidprompt

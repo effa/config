@@ -144,11 +144,11 @@ bar {
     output HDMI1
     output HDMI2
     position bottom
-    #status_command i3status
     status_command i3status --config ~/dotfiles/_i3_status.conf
+    status_command i3blocks
     colors {
         background #2D261D
-        statusline #BBBBBB
+        statusline #CCCCCC
     }
 }
 
@@ -157,12 +157,16 @@ bar {
     output eDP1
     position bottom
     #status_command i3status
-    status_command i3status --config ~/dotfiles/_i3_status.conf
+    #status_command i3status --config ~/dotfiles/_i3_status.conf
+    status_command i3blocks
     colors {
         background #2D261D
         statusline #CCCCCC
     }
 }
+
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+10 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+10 i3blocks
 
 # -------------- outputs -----------------
 
@@ -188,12 +192,12 @@ bindsym $mod+o scratchpad show
 # --------- special keys -------------
 
 # print screen
-# TODO ...bindsym Print exec gnome-screenshot --interactive
+bindsym Print exec xfce4-screenshooter
 
 # audio control
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down; exec pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec pulseaudio-ctl mute; exec pkill -RTMIN+10 i3blocks
 
 # brightness control
 bindsym XF86MonBrightnessUp exec xbacklight +10
@@ -230,7 +234,7 @@ bindsym $alt+a exec anki
 # chromium
 bindsym $alt+c exec chromium
 # dropbox
-bindsym $alt+d exec dropbox
+bindsym $alt+d exec chromium --new-window https://drive.google.com/
 # gvim (text editor)
 bindsym $alt+g exec gvim
 # ristretto (image viewer)
@@ -249,16 +253,16 @@ bindsym $alt+v exec vlc
 bindsym $alt+z exec zathura
 
 # application menu
-set $MENU "Anki Chromium Dropbox Gvim rIstretto Libreoffice Netbeans Ranger Skype Thunar Vlc Zathura"
+set $MENU "Anki Chromium Drive Gvim rIstretto Libreoffice Ranger Skype Thunar Vlc Zathura"
 bindsym $mod+m mode $MENU
 mode $MENU {
     bindsym a exec anki, mode "default"
     bindsym c exec chromium, mode "default"
-    bindsym d exec dropbox, mode "default"
+    bindsym d exec chromium --new-window https://drive.google.com/, mode "default"
     bindsym g exec gvim, mode "default"
     bindsym i exec ristretto, mode "default"
     bindsym l exec libreoffice, mode "default"
-    bindsym n exec netbeans, mode "default"
+    #bindsym n exec netbeans, mode "default"
     bindsym r exec gnome-terminal -x sh -c "ranger", mode "default"
     bindsym s exec skype, mode "default"
     bindsym t exec thunar, mode "default"
@@ -273,9 +277,14 @@ mode $MENU {
 # network manager
 exec --no-startup-id nm-applet
 
+# notifications
+
+exec --no-startup-id dunst -config ~/dotfiles/dunstrc
+
 # terminal
 # exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal'
 
 
 # ------------- background -------------------
-exec --no-startup-id xsetroot -solid "#112233"
+#exec --no-startup-id xsetroot -solid "#AA2244"
+exec --no-startup-id /usr/bin/feh --bg-scale '/home/tom/local/pictures/wallpapers/arch-grey.jpg'
