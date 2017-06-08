@@ -1,0 +1,7 @@
+[user]
+  name = Tomáš Effenberger
+  email = Tomas.Effenberger@gmail.com
+[push]
+  default = simple
+[core]
+  excludesfile = ~/dotfiles/_gitignore-global
