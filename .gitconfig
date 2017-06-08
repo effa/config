@@ -5,3 +5,5 @@
   default = simple
 [core]
   excludesfile = ~/dotfiles/_gitignore-global
+[credential]
+  helper = /usr/lib/git-core/git-credential-gnome-keyring
