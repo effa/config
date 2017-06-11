@@ -1,9 +1,11 @@
 [user]
-  name = Tomáš Effenberger
-  email = Tomas.Effenberger@gmail.com
+	name = Tomáš Effenberger
+	email = Tomas.Effenberger@gmail.com
 [push]
-  default = simple
+	default = simple
 [core]
-  excludesfile = ~/dotfiles/_gitignore-global
+	excludesfile = ~/dotfiles/_gitignore-global
 [credential]
-  helper = /usr/lib/git-core/git-credential-gnome-keyring
+	helper = /usr/lib/git-core/git-credential-gnome-keyring
+[merge]
+	conflictstyle = diff3
