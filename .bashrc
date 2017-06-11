@@ -56,6 +56,7 @@ source /usr/bin/virtualenvwrapper.sh
 #PS1="[\u@\h \W] ${_GIT_STATUS}${_RETVAL}\$ "
 # NOTE: user, pc and full path are shown in window title bar
 source /usr/share/git/completion/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\W$(__git_ps1 ":%s")\$ '
 # prompt settings
 #PS1='[\u@\h \W]\$ '
