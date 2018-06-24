@@ -1,15 +1,12 @@
 install:
-	setup-git
-	setup-vim
-	ln -s ~/dotfiles/.bash_aliases ~/.bash_aliases
-	ln -s ~/dotfiles/.bashrc ~/.bashrc
-	ln -s ~/dotfiles/.xprofile ~/.xprofile
+	@echo "Follow README and think :)"
 
-setup-git:
-	ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+links:
+	ln -s ~/repos/config/.gitconfig ~/.gitconfig
+	ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
+	ln -s ~/repos/config/.bashrc ~/.bashrc
+	ln -s ~/repos/config/.vimrc ~/.vimrc
 
-setup-vim:
-	ln -s ~/dotfiles/.vimrc ~/.vimrc
+vim:
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +PluginInstall +qall
-	# + set solarized colorscheme (gnome-terminal>profile>colors>pallete)
