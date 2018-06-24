@@ -3,21 +3,17 @@
 * Setup system settings:
   dock, power, displays, keyboard shortcuts,
   language (set UK formats, add Czech input source),
-  add Google account.
-  
-* Setup terminal preferences:
+  add Google account.  
+  Setup terminal preferences:
   disable bell, sett solarized-light scheme and palette,
   (and possibly keyboard shortcuts).  
 
-* Install git:
+* Install git and clone this repo:
 
        sudo apt update
        sudo apt install git
-
-* Clone this repository:
-
-       ~$ mkdir repos; cd repos
-       ~/repos$ git clone https://github.com/effa/config.git      
+       mkdir repos; cd repos
+       git clone https://github.com/effa/config.git      
          
 * Make links to dotfiles:
 	
@@ -36,6 +32,8 @@
 * Install vim:
 
         sudo apt install vim
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        vim +PluginInstall +qall
 
 * Generate SSH keys
 * Setup keyboard shortcuts
