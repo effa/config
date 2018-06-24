@@ -1,10 +1,17 @@
 # Setup New Ubuntu (18.04)
        
-* Install git
-* Clone this repository
-* Install pip and pipenv    
+* Install git:
+
+       sudo apt update
+       sudo apt install git
+
+* Clone this repository:
+
+       ~$ mkdir repos; cd repos
+       ~/repos$ git clone https://github.com/effa/config.git
+
+* Install pip and pipenv:
         
-        sudo apt update
         sudo apt install python3-pip
         pip3 install --user pipenv
         echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
@@ -12,6 +19,7 @@
         
 * Install vim
 * Make links to dotfiles
+* Generate SSH keys
 * Setup keyboard shortcuts
 * Install LaTeX
 
