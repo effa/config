@@ -37,6 +37,7 @@
 * Install various utilities:
 
         sudo apt install gnome-screensaver  # Locking screen in a terminal.
+        sudo apt install gnome-shell-extensions  # Also installs gnome-tweaks.
 
 * Generate SSH keys
 * Setup keyboard shortcuts
