@@ -21,7 +21,10 @@
         echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
         source ~/.bashrc
         
-* Install vim
+* Install vim:
+
+        sudo apt install vim
+        
 * Make links to dotfiles
 * Generate SSH keys
 * Setup keyboard shortcuts
