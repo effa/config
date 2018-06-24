@@ -22,11 +22,8 @@
         
         pipenv install jupyter
         
-* Active an existing environment and run jupyter:   
+* Run jupyter or any script within the environment:   
         
-        pipenv shell
-        jupyter notebook
-        # ----- or -----
         pipenv run jupyter notebook
         
         
