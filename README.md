@@ -48,9 +48,7 @@
         
 * Run jupyter or any script within the environment:   
         
-        pipenv run jupyter notebook
-        
-        
+        pipenv run jupyter notebook    
  
 # LaTeX
        
@@ -61,3 +59,8 @@
  * Clean all generated files: 
         
         latexmk -CA -bibtex
+	
+# Printing
+
+	lpr -P copy5c-duplex
+	lpr -P copy5c-duplex -o PageSize=A4 -o fit-to-page
