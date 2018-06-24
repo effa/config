@@ -69,6 +69,7 @@ set shiftround
 set smarttab
 " but do not be to much intelligent in tex files
 autocmd FileType tex setlocal nosmarttab
+autocmd FileType tex setlocal indentexpr=
 
 " soft (visual) wrapping
 set wrap
