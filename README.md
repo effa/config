@@ -31,11 +31,11 @@
         sudo apt install vim
         
 * Make links to dotfiles:
-
-	ln -s ~/repos/config/.gitconfig ~/.gitconfig
-	ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
-	ln -s ~/repos/config/.bashrc ~/.bashrc
-	ln -s ~/repos/config/.vimrc ~/.vimrc
+	
+        ln -s ~/repos/config/.gitconfig ~/.gitconfig
+        ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
+        ln -s ~/repos/config/.bashrc ~/.bashrc
+        ln -s ~/repos/config/.vimrc ~/.vimrc
 
 * Generate SSH keys
 * Setup keyboard shortcuts
