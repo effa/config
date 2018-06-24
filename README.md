@@ -3,10 +3,9 @@
 * Setup system settings:
   dock, power, displays, keyboard shortcuts,
   language (set UK formats, add Czech input source),
-  add Google account.  
-  Setup terminal preferences:
-  disable bell, sett solarized-light scheme and palette,
-  (and possibly keyboard shortcuts).  
+  add Google account. Setup terminal preferences:
+  disable bell, set solarized-light scheme and palette,
+  (and possibly keyboard shortcuts).
 
 * Install git and clone this repo:
 
@@ -29,9 +28,9 @@
         echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
         source ~/.bashrc
         
-* Install vim:
+* Install vim and gvim:
 
-        sudo apt install vim
+        sudo apt install vim-gnome   # Necessary for the clipboard support.
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
         vim +PluginInstall +qall
 
