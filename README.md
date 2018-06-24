@@ -1,5 +1,9 @@
 # Setup New Ubuntu (18.04)
-       
+
+* Setup terminal preferences:
+  disable bell, sett solarized-light scheme and palette,
+  (and possibly keyboard shortcuts).  
+
 * Install git:
 
        sudo apt update
