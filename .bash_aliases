@@ -11,12 +11,12 @@ alias print-home='lpr -P HP_LaserJet_1018'
 alias print-copy5c='lpr -P copy5c-duplex'
 
 ## System commands
-#alias euclid-shutdown='systemctl poweroff'
-#alias euclid-suspend='i3lock && sleep 1 && systemctl suspend'
-#alias euclid-hibernate='i3lock && sleep 1 && systemctl hibernate'
-#alias euclid-reboot='systemctl reboot'
-#alias euclid-logout='i3-msg exit'
-#alias euclid-lock='i3lock -d -c 000000'
+alias euclid-shutdown='systemctl poweroff'
+alias euclid-suspend='systemctl suspend'
+alias euclid-hibernate='systemctl hibernate'
+alias euclid-reboot='systemctl reboot'
+alias euclid-logout='gnome-session-quit'
+alias euclid-lock='gnome-screensaver-command --lock'
 
 # Remote access
 alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
