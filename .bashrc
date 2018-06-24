@@ -29,14 +29,19 @@ shopt -s globstar
 # e.g. !echo<space> expands to the last command starting with "echo"
 bind Space:magic-space
 
-## Git
-#source /usr/share/git/completion/git-prompt.sh
-#export GIT_PS1_SHOWDIRTYSTATE=1
+# Enable bash completions (including git completions if available):
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
-# Prompt
-#PS1='\W$(__git_ps1 ":%s")\$ '
-#PS1='[\u@\h \W]\$ '
-PS1='\W\$ '
+# Prompt (with git branch and state):
+export GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\W$(__git_ps1 ":%s")\$ '
+#PS1='\W\$ '
 
-# Make less more friendly for non-text input files, see lesspipe(1).
+# Make less more friendly for non-text input files:
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
