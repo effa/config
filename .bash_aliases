@@ -23,6 +23,19 @@ alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
 alias ssh-belos='ssh xeffenb1@belos.fi.muni.cz'
 alias ssh-al='ssh effa@al.thran.cz'
 
+# Color support of ls, grep, fgrep and egrep
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ls
+alias la='ls -A'  # list all
+alias ll='ls -alF'  # list all with details
+
+# Alert after a command is finnished. Usage: sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 # Other
 alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
 alias glog='git log --graph --oneline --decorate --all'
