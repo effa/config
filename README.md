@@ -1,5 +1,10 @@
 # Setup New Ubuntu (18.04)
 
+* Setup system settings:
+  dock, power, displays, keyboard shortcuts,
+  language (set UK formats, add Czech input source),
+  add Google account.
+  
 * Setup terminal preferences:
   disable bell, sett solarized-light scheme and palette,
   (and possibly keyboard shortcuts).  
