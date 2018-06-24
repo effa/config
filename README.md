@@ -4,6 +4,7 @@
 * Clone this repository
 * Install pip and pipenv    
         
+        sudo apt update
         sudo apt install python3-pip
         pip3 install --user pipenv
         echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
