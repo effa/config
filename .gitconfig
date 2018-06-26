@@ -7,5 +7,6 @@
 	excludesfile = ~/repos/config/.gitignore-global
 [credential]
 	username = effa
+	helper = cache
 [merge]
 	conflictstyle = diff3
