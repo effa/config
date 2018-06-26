@@ -68,3 +68,46 @@
 
 	lpr -P copy5c-duplex
 	lpr -P copy5c-duplex -o PageSize=A4 -o fit-to-page
+
+# Keybindings
+
+Keys | Action
+--- | ---
+**Super+**            | **Windows (and system)**
+Super+Enter           | Run command
+Super+Space           | Switch language
+Super+A               | Show Apps Menu
+Super+1-4             | Move to workspace 1-4
+Super+PgDown/Up       | Move to workspace below/above
+Super+Shift+1-4       | Move window to workspace 1-4
+Super+Shift+PgDown/Up | Move window to workspace below/above
+Super+Tab             | Switch between windows
+Super+Shift+Q         | Close window
+Super+Arrows          | Maximize / Unmaximize / Fill left / Fill right
+Super+F               | Toggle Full screen mode
+Super+M               | Move window
+Super+R               | Resize window
+Super+Z               | Toggle Zoom mode
+Super+Shift+(+/-)     | Zoom in/out (only in Zoom mode)
+Super+N               | Show notification panel (includes calendar)
+Super+Shift+N         | Show active notification
+**Ctrl+Alt+**         | **Apps (and system)**
+Ctrl+Alt+L            | Lock Screen
+Ctrl+Alt+T            | terminal
+Ctrl+Alt+W            | web browser
+Ctrl+Alt+C            | calculator
+Ctrl+Alt+Q            | search (query)
+Ctrl+Alt+S            | settings
+Ctrl+Alt+H            | help
+Print                 | Copy a screenshot of selected area
+Ctrl+Alt+Print        | Save screenshot of selected area
+**Ctrl+**             | **App-specific**
+Ctrl+Shift+(+/-/0)    | Zoom content in/out/default
+**Alt+**              | **App-specific**
+Alt+1-9               | Switch tabs
+
+See [exported keybindings](keybindings.dconf).
+To import or export keybindings:
+
+    dconf dump /org/gnome/desktop/wm/keybindings/ > keybindings.dconf
+    dconf load /org/gnome/desktop/wm/keybindings/ < keybindings.dconf
