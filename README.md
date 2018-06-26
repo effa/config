@@ -21,12 +21,12 @@
         ln -s ~/repos/config/.bashrc ~/.bashrc
         ln -s ~/repos/config/.vimrc ~/.vimrc
 
-* Install pip and pipenv:
+* Install pip, pipenv, and some useful Python packages:
 
-        sudo apt install python3-pip
-        pip3 install --user pipenv
-        echo "PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
-        source ~/.bashrc
+        sudo apt install python3-pip python3-tk
+        pip3 install -U --user pipenv pytest jupyter ipywidgets Pillow networkx
+        pip3 install -U --user numpy matplotlib pandas seaborn scikit-learn scipy
+        ln -s ~/repos/config/init_ipython.py ~/.ipython/profile_default/startup/init_ipython.py
 
 * Install vim and gvim:
 
@@ -39,9 +39,9 @@
         sudo apt install gnome-screensaver  # Locking screen in a terminal.
         sudo apt install gnome-shell-extensions  # Also installs gnome-tweaks.
 
-* Generate SSH keys
-* Setup keyboard shortcuts
-* Install LaTeX
+* Generate SSH keys.
+* Setup keybindings (see below).
+* Install LaTeX.
 
 
 # Python
@@ -96,6 +96,7 @@ Ctrl+Alt+L            | Lock Screen
 Ctrl+Alt+T            | terminal
 Ctrl+Alt+W            | web browser
 Ctrl+Alt+C            | calculator
+Ctrl+Alt+I            | ipython (calculator++)
 Ctrl+Alt+Q            | search (query)
 Ctrl+Alt+S            | settings
 Ctrl+Alt+H            | help
