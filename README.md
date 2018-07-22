@@ -41,6 +41,7 @@
 
 * Generate SSH keys.
 * Setup keybindings (see below).
+* Use Gnome Tweaks to set up start-up apps: Chrome.
 * Install LaTeX.
 
 
@@ -112,3 +113,7 @@ To import or export keybindings:
 
     dconf dump /org/gnome/desktop/wm/keybindings/ > keybindings.dconf
     dconf load /org/gnome/desktop/wm/keybindings/ < keybindings.dconf
+    
+Use Gnome Tweaks (Keyboard > Additional Keyboard Layouts) to set:
+* non-breakable space: shift + space
+* switch language: alt + shift
