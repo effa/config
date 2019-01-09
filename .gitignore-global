@@ -1,30 +1,30 @@
-# local and temporary files
+# Local and temporary files
 local/
 temp/
 
-# backup and autosave files
+# Backup and autosave files
 *~
 *.bak
 *.swp
 
-# Python, C, etc.
+# Code-related auxiliary files
 *.pyc
 *.o
 *.obj
 
-# PDF and similar
+# PDF-related
 *.dvi
 *.ps
 *.pdf
 
-# TeX auxiliary files
+# TeX-related auxiliary files
 *.aux
 *.log
 *.out
 *.toc
 *.synctex.gz
-
-# BiBLaTeX auxiliary files
+*.fdb_latexmk
+*.fls
 *.bbl
 *.blg
 *.bcf
