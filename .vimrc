@@ -17,11 +17,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 "Plugin 'lambdatoast/elm.vim'
 "Plugin 'jmcantrell/vim-virtualenv'
 
@@ -221,8 +222,10 @@ call togglebg#map("<F4>")
 "  AirLine
 " ==========================================================
 
-" display all the time
+" Display the airline all the time.
 set laststatus=2
+" Avoid pause when leaving insert mode.
+set ttimeoutlen=50
 
 " set symbols
 let g:airline_powerline_fonts = 0
@@ -233,25 +236,18 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.branch = ''
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.whitespace = 'Ξ'
 
-" use solarized color theme
-let g:airline_theme = 'solarized'
+" (Temporarily) removed due to errors it causes when opening new tabs.
+"" Top line (for tabs and buffers)
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#tab_min_count = 2
+"let g:airline#extensions#tabline#show_buffers = 1
+"let g:airline#extensions#tabline#buffer_min_count = 2
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 
-" top line (for tabs and buffers)
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_min_count = 2
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#buffer_min_count = 2
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-
-" to avoid pause when leaving insert mode
-set ttimeoutlen=50
-
-" integration of other plugins
+" Integration of other plugins
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#branch#enabled = 1
