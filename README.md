@@ -20,6 +20,7 @@
         ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
         ln -s ~/repos/config/.bashrc ~/.bashrc
         ln -s ~/repos/config/.vimrc ~/.vimrc
+        ln -s ~/repos/config/.latexmkrc ~/.latexmkrc
 
 * Install pip, pipenv, and some useful Python packages:
 
@@ -39,10 +40,13 @@
         sudo apt install gnome-screensaver  # Locking screen in a terminal.
         sudo apt install gnome-shell-extensions  # Also installs gnome-tweaks.
 
-* Generate SSH keys.
 * Setup keybindings (see below).
 * Use Gnome Tweaks to set up start-up apps: Chrome.
-* Install LaTeX.
+* Generate SSH keys.
+
+* Install LaTeX and latexmk.
+
+        sudo apt install texlive-latex-extra latexmk
 
 
 # Python
@@ -59,7 +63,7 @@
 
 * Build a PDF and watch for changes (*preview continuously*):
 
-        latexmk -pdf -pvc -quiet somefile.tex
+        latexmk -pvc -quiet [somefile.tex]  # or use `pdf` alias
 
  * Clean all generated files:
 
@@ -113,7 +117,7 @@ To import or export keybindings:
 
     dconf dump /org/gnome/desktop/wm/keybindings/ > keybindings.dconf
     dconf load /org/gnome/desktop/wm/keybindings/ < keybindings.dconf
-    
+
 Use Gnome Tweaks (Keyboard > Additional Keyboard Layouts) to set:
 * non-breakable space: shift + space
 * switch language: alt + shift
