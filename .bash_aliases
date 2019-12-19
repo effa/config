@@ -40,4 +40,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
 alias glog='git log --graph --oneline --decorate --all'
 alias audio-split='mp3splt -f -t 7.0 -o @f_@n -d parts'
-alias pdf='latexmk -pvc -quiet'
+alias pdf='latexmk -pdf -pvc -quiet'

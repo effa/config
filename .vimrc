@@ -22,7 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'matze/vim-tex-fold'
 "Plugin 'lambdatoast/elm.vim'
 "Plugin 'jmcantrell/vim-virtualenv'
 
@@ -33,7 +33,7 @@ call vundle#end()
 " ==========================================================
 
 " set correct filetypes
-autocmd BufRead,BufNewFile *.txt,*.md,*markdown,TODO
+autocmd BufRead,BufNewFile *.md,*markdown,TODO
         \ setlocal filetype=markdown
 
 " syntax highlighting
@@ -198,7 +198,7 @@ nmap <leader>i :set list!<CR>
 " ==========================================================
 
 " Python: save and execute
-autocmd FileType python map <buffer> <f5> :w<cr>:!python %<cr>
+autocmd FileType python map <buffer> <f5> :w<cr>:!python3 %<cr>
 
 " AsciiDoc: save and convert to PDF
 autocmd FileType asciidoc map <buffer> <f5> :w<cr>:!a2pdf %<cr>
