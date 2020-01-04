@@ -62,7 +62,8 @@
 # Vim
 
 Random tips (also see .vimrc):
-* `(insert-mode) ctrl-r` list snippets (e.g. "item", "enum")
+* `[normal] q: / q?` list previously executed commands / searches (and execute a new one)
+* `[insert] ctrl-r` list snippets (e.g. "item", "enum")
 * `:%s//something new/g` replace using the last regex
 
 
