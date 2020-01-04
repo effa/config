@@ -59,6 +59,13 @@
 
         pipenv run jupyter notebook
 
+# Vim
+
+Random tips (also see .vimrc):
+* `(insert-mode) ctrl-r` list snippets (e.g. "item", "enum")
+* `:%s//something new/g` replace using the last regex
+
+
 # LaTeX
 
 * Build a PDF and watch for changes (*preview continuously*):
