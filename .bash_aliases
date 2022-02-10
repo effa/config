@@ -40,4 +40,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
 alias glog='git log --graph --oneline --decorate --all'
 alias audio-split='mp3splt -f -t 7.0 -o @f_@n -d parts'
-alias pdf='latexmk -pdf -pvc -quiet'
+alias pdf='latexmk -pv'  # see .latexmkrc
+alias pvc='latexmk -pvc'  # see .latexmkrc
+alias rmcrash='sudo rm /var/crash/*'
+alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
+alias download-mp3='youtube-dl --extract-audio --audio-format mp3'
+alias download-mp3-playlist='youtube-dl --yes-playlist --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
+# Only part of playlist, continue partially downloaded, ignore errors, no overwrites:
+# youtube-dl -ciw --playlist-items 37-75 --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s" .....
+alias download-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"

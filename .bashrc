@@ -46,6 +46,8 @@ PS1='\W$(__git_ps1 ":%s")\$ '
 # Make less more friendly for non-text input files:
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
-source /usr/local/bin/virtualenvwrapper.sh
+# Virtualenvwrapper
+#export WORKON_HOME=~/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+#source /usr/local/bin/virtualenvwrapper.sh
+#source virtualenvwrapper.sh
