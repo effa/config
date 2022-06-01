@@ -48,6 +48,10 @@
 
         sudo apt install texlive-latex-extra latexmk
 
+* Install Inkscape and configure it.
+
+        ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
+
 
 # Python
 

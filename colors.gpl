@@ -1,0 +1,39 @@
+GIMP Palette
+Name: MyPalette
+Columns: 1
+#
+255 255 255 FFFFFF white
+236 240 241 ECF0F1 grey1
+189 195 199 BDC3C7 grey2
+149 165 166 95A5A6 grey3
+127 140 141 7F8C8D grey4
+ 64  64  64 404040 grey5
+  0   0   0 000000 black
+ 26 188 156 1ABC9C teal1
+ 22 160 133 16A085 teal2
+176 218 185 B0DAB9 mint
+ 46 204 113 2ECC71 green1
+ 39 174  96 27AE60 green2
+  9 121 105 097969 ink green
+173 216 230 ADD8E6 light blue
+ 52 152 219 3498DB blue1
+ 41 128 185 2980B9 blue2
+155  89 182 9B59B6 purple1
+142  68 173 8E44AD purple2
+159  43 104 9F2B68 ink purple
+ 52  73  94 34495E midnight1
+ 44  62  80 2C3E50 midnight2
+246 215 136 F6D788 vanilla
+241 196  15 F1C40F yellow
+243 156  18 F39C12 orange
+230 126  34 E67E22 carrot
+211  84   0 D35400 pumpkin
+231  76  60 E74C3C tomato
+192  57  43 C0392B pomegranate
+217 189 150 D9BD96 light brown
+141  85  49 8D5531 chocolate
+140  99 167 8C63A7 blueberry
+193  60  60 C13C3C strawberry
+255   0   0 FF0000 red
+  0 255   0 00FF00 green
+  0   0 255 0000FF blue
