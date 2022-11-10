@@ -11,6 +11,7 @@ temp/
 *.pyc
 *.o
 *.obj
+.ipynb_checkpoints/
 
 # PDF-related
 *.dvi

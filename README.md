@@ -1,67 +1,68 @@
-# Setup New Ubuntu (18.04)
+# Setup New Ubuntu (22.04)
+
+Assuming KDE.
+
+* Update packages.
 
 * Setup system settings:
-  dock, power, displays, keyboard shortcuts,
-  language (set UK formats, add Czech input source),
-  add Google account. Setup terminal preferences:
+  power,
+  displays,
+  language (American English interface, Czech formats),
+  keyboard layout switching (alt + shift)
+
+* Install Chrome (using deb directly from its website).
+
+* Setup terminal preferences:
   disable bell, set solarized-light scheme and palette,
   (and possibly keyboard shortcuts).
+
+* [Generate a SSH key, add it to ssh-agent and to your GitHub account.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 * Install git and clone this repo:
 
        sudo apt update
        sudo apt install git
+       ln -s ~/repos/config/.gitconfig ~/.gitconfig
        mkdir repos; cd repos
        git clone https://github.com/effa/config.git
 
 * Make links to dotfiles:
 
-        ln -s ~/repos/config/.gitconfig ~/.gitconfig
         ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
         ln -s ~/repos/config/.bashrc ~/.bashrc
-        ln -s ~/repos/config/.vimrc ~/.vimrc
-        ln -s ~/repos/config/.latexmkrc ~/.latexmkrc
 
-* Install pip, pipenv, and some useful Python packages:
+* Install vim:
 
-        sudo apt install python3-pip python3-tk
-        pip3 install -U --user pipenv pytest jupyter ipywidgets Pillow networkx
-        pip3 install -U --user numpy matplotlib pandas seaborn scikit-learn scipy
-        ln -s ~/repos/config/init_ipython.py ~/.ipython/profile_default/startup/init_ipython.py
-
-* Install vim and gvim:
-
-        sudo apt install vim-gnome   # Necessary for the clipboard support.
+        sudo apt install vim-gtk3  # for clipboard support.
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        ln -s ~/repos/config/.vimrc ~/.vimrc
         vim +PluginInstall +qall
 
-* Install various utilities:
+* Install common Python packages:
 
-        sudo apt install gnome-screensaver  # Locking screen in a terminal.
-        sudo apt install gnome-shell-extensions  # Also installs gnome-tweaks.
+        sudo apt install python3-pip
+        pip3 install -U --user jupyter pytest networkx
+        pip3 install -U --user numpy matplotlib pandas seaborn scikit-learn scipy
 
-* Setup keybindings (see below).
-* Use Gnome Tweaks to set up start-up apps: Chrome.
-* Generate SSH keys.
+* Create ipython profile:
+
+        ipython profile create
+        ln -s ~/repos/config/init_ipython.py ~/.ipython/profile_default/startup/init_ipython.py
 
 * Install LaTeX and latexmk.
 
         sudo apt install texlive-latex-extra latexmk
+        ln -s ~/repos/config/.latexmkrc ~/.latexmkrc
 
-* Install Inkscape and configure it.
+* [Install Inkscape](https://wiki.inkscape.org/wiki/Installing_Inkscape) (use ppa for the latest stable version):
 
+        sudo add-apt-repository ppa:inkscape.dev/stable
+        sudo apt update
+        sudo apt install inkscape
         ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
 
+* Setup keybindings (see below).
 
-# Python
-
-* Create new environment and install its dependencies:
-
-        pipenv install jupyter
-
-* Run jupyter or any script within the environment:
-
-        pipenv run jupyter notebook
 
 # Vim
 
@@ -123,13 +124,3 @@ Ctrl+Alt+Print        | Save screenshot of selected area
 Ctrl+Shift+(+/-/0)    | Zoom content in/out/default
 **Alt+**              | **App-specific**
 Alt+1-9               | Switch tabs
-
-See [exported keybindings](keybindings.dconf).
-To import or export keybindings:
-
-    dconf dump /org/gnome/desktop/wm/keybindings/ > keybindings.dconf
-    dconf load /org/gnome/desktop/wm/keybindings/ < keybindings.dconf
-
-Use Gnome Tweaks (Keyboard > Additional Keyboard Layouts) to set:
-* non-breakable space: shift + space
-* switch language: alt + shift
