@@ -51,3 +51,5 @@ PS1='\W$(__git_ps1 ":%s")\$ '
 #export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 #source /usr/local/bin/virtualenvwrapper.sh
 #source virtualenvwrapper.sh
+
+scp-umime() { scp "$1" umimetoorg@umimeto.org:ftp/umimefakta.cz/webroot/admxtrs/tomeff; }

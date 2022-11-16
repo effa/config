@@ -22,6 +22,7 @@ alias euclid-lock='gnome-screensaver-command --lock'
 alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
 alias ssh-belos='ssh xeffenb1@belos.fi.muni.cz'
 alias ssh-al='ssh effa@al.thran.cz'
+alias ssh-umime='ssh umimetoorg@umimeto.org'
 
 # Color support of ls, grep, fgrep and egrep
 alias ls='ls --color=auto'
@@ -44,6 +45,7 @@ alias pdf='latexmk -pv'  # see .latexmkrc
 alias pvc='latexmk -pvc'  # see .latexmkrc
 alias rmcrash='sudo rm /var/crash/*'
 alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
+alias lab='env PYTHONPATH=`pwd` jupyter lab'
 alias download-mp3='youtube-dl --extract-audio --audio-format mp3'
 alias download-mp3-playlist='youtube-dl --yes-playlist --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
 # Only part of playlist, continue partially downloaded, ignore errors, no overwrites:
