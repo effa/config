@@ -38,6 +38,15 @@ Assuming KDE.
         ln -s ~/repos/config/.vimrc ~/.vimrc
         vim +PluginInstall +qall
 
+* Setup keyboard layout:
+
+        ln -s ~/repos/config/.Xmodmap ~/.Xmodmap
+        xmodmap ~/.Xmodmap
+
+
+* Setup keybindings (see below).
+
+
 * Install common Python packages:
 
         sudo apt install python3-pip
@@ -60,8 +69,6 @@ Assuming KDE.
         sudo apt update
         sudo apt install inkscape
         ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
-
-* Setup keybindings (see below).
 
 
 # Vim
@@ -88,6 +95,7 @@ Random tips (also see .vimrc):
 	lpr -P copy5c-duplex -o PageSize=A4 -o fit-to-page
 
 # Keybindings
+
 
 Keys | Action
 --- | ---
