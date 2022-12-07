@@ -20,66 +20,66 @@ Assuming KDE.
 
 * Install git and clone this repo:
 
-       sudo apt update
-       sudo apt install git
-       ln -s ~/repos/config/.gitconfig ~/.gitconfig
-       mkdir repos; cd repos
-       git clone https://github.com/effa/config.git
+      sudo apt update
+      sudo apt install git
+      ln -s ~/repos/config/.gitconfig ~/.gitconfig
+      mkdir repos; cd repos
+      git clone https://github.com/effa/config.git
 
 * Make links to dotfiles:
 
-        ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
-        ln -s ~/repos/config/.bashrc ~/.bashrc
+      ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
+      ln -s ~/repos/config/.bashrc ~/.bashrc
 
 * Install vim:
 
-        sudo apt install vim-gtk3  # for clipboard support.
-        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-        ln -s ~/repos/config/.vimrc ~/.vimrc
-        vim +PluginInstall +qall
+      sudo apt install vim-gtk3  # for clipboard support.
+      git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+      ln -s ~/repos/config/.vimrc ~/.vimrc
+      vim +PluginInstall +qall
 
 * Add custom keyboard layout:
 
-        sudo cp /usr/share/X11/xkb/symbols/cz /usr/share/X11/xkb/symbols/cz.old
-        sudo cp ~/repos/xkb/cz /usr/share/X11/xkb/symbols/cz
+      sudo cp /usr/share/X11/xkb/symbols/cz /usr/share/X11/xkb/symbols/cz.old
+      sudo cp ~/repos/xkb/cz /usr/share/X11/xkb/symbols/cz
 
 * Add the following lines to `/usr/share/X11/xkb/rules/evdev.xml`.
 
-        <variant>
-          <configItem>
-            <name>tom</name>
-            <description>Czech (Tom variant)</description>
-          </configItem>
-        </variant>
+      <variant>
+        <configItem>
+          <name>tom</name>
+          <description>Czech (Tom variant)</description>
+        </configItem>
+      </variant>
 
 * Restart the window manager and select the Tom variant in the keyboard setting.
 
-        systemctl restart display-manager
+      systemctl restart display-manager
 
 * Setup keybindings (see below).
 
 * Install common Python packages:
 
-        sudo apt install python3-pip
-        pip3 install -U --user jupyter pytest networkx
-        pip3 install -U --user numpy matplotlib pandas seaborn scikit-learn scipy
+      sudo apt install python3-pip
+      pip3 install -U --user jupyter pytest networkx
+      pip3 install -U --user numpy matplotlib pandas seaborn scikit-learn scipy
 
 * Create ipython profile:
 
-        ipython profile create
-        ln -s ~/repos/config/init_ipython.py ~/.ipython/profile_default/startup/init_ipython.py
+      ipython profile create
+      ln -s ~/repos/config/init_ipython.py ~/.ipython/profile_default/startup/init_ipython.py
 
 * Install LaTeX and latexmk.
 
-        sudo apt install texlive-latex-extra latexmk
-        ln -s ~/repos/config/.latexmkrc ~/.latexmkrc
+      sudo apt install texlive-latex-extra latexmk
+      ln -s ~/repos/config/.latexmkrc ~/.latexmkrc
 
 * [Install Inkscape](https://wiki.inkscape.org/wiki/Installing_Inkscape) (use ppa for the latest stable version):
 
-        sudo add-apt-repository ppa:inkscape.dev/stable
-        sudo apt update
-        sudo apt install inkscape
-        ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
+      sudo add-apt-repository ppa:inkscape.dev/stable
+      sudo apt update
+      sudo apt install inkscape
+      ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
 
 
 # Vim
@@ -94,16 +94,16 @@ Random tips (also see .vimrc):
 
 * Build a PDF and watch for changes (*preview continuously*):
 
-        latexmk -pvc -quiet [somefile.tex]  # or use `pdf` alias
+      latexmk -pvc -quiet [somefile.tex]  # or use `pdf` alias
 
- * Clean all generated files:
+* Clean all generated files:
 
-        latexmk -CA -bibtex
+      latexmk -CA -bibtex
 
 # Printing
 
-	lpr -P copy5c-duplex
-	lpr -P copy5c-duplex -o PageSize=A4 -o fit-to-page
+    lpr -P copy5c-duplex
+    lpr -P copy5c-duplex -o PageSize=A4 -o fit-to-page
 
 # Keybindings
 
