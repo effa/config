@@ -38,14 +38,25 @@ Assuming KDE.
         ln -s ~/repos/config/.vimrc ~/.vimrc
         vim +PluginInstall +qall
 
-* Setup keyboard layout:
+* Add custom keyboard layout:
 
-        ln -s ~/repos/config/.Xmodmap ~/.Xmodmap
-        xmodmap ~/.Xmodmap
+        sudo cp /usr/share/X11/xkb/symbols/cz /usr/share/X11/xkb/symbols/cz.old
+        sudo cp ~/repos/xkb/cz /usr/share/X11/xkb/symbols/cz
 
+* Add the following lines to `/usr/share/X11/xkb/rules/evdev.xml`.
+
+        <variant>
+          <configItem>
+            <name>tom</name>
+            <description>Czech (Tom variant)</description>
+          </configItem>
+        </variant>
+
+* Restart the window manager and select the Tom variant in the keyboard setting.
+
+        systemctl restart display-manager
 
 * Setup keybindings (see below).
-
 
 * Install common Python packages:
 
