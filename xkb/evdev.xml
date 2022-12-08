@@ -2976,12 +2976,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>tom</name>
-            <description>Czech (Tom variant)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>qwerty-mac</name>
             <description>Czech (QWERTY, Macintosh)</description>
           </configItem>
@@ -6367,11 +6361,23 @@
     </layout>
     <layout>
       <configItem>
-	<name>custom</name>
+        <name>custom</name>
         <shortDescription>custom</shortDescription>
         <description>A user-defined custom Layout</description>
       </configItem>
       <variantList/>
+    </layout>
+    <layout>
+      <configItem>
+        <name>te</name>
+        <shortDescription>tom</shortDescription>
+        <description>Czech (Tom)</description>
+        <languageList>
+          <iso639Id>cs</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+      </variantList>
     </layout>
   </layoutList>
   <optionList>

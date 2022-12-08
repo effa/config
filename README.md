@@ -40,19 +40,24 @@ Assuming KDE.
 
 * Add custom keyboard layout:
 
-      sudo cp /usr/share/X11/xkb/symbols/cz /usr/share/X11/xkb/symbols/cz.old
-      sudo cp ~/repos/xkb/cz /usr/share/X11/xkb/symbols/cz
+      sudo cp ~/repos/xkb/te /usr/share/X11/xkb/symbols/te
 
 * Add the following lines to `/usr/share/X11/xkb/rules/evdev.xml`.
 
-      <variant>
+      <layout>
         <configItem>
-          <name>tom</name>
-          <description>Czech (Tom variant)</description>
+          <name>te</name>
+          <shortDescription>tom</shortDescription>
+          <description>Czech (Tom)</description>
+          <languageList>
+            <iso639Id>cs</iso639Id>
+          </languageList>
         </configItem>
-      </variant>
+        <variantList>
+        </variantList>
+      </layout>
 
-* Restart the window manager and select the Tom variant in the keyboard setting.
+* Restart the window manager and select the Tom layout in the keyboard setting.
 
       systemctl restart display-manager
 
