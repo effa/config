@@ -21,9 +21,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'preservim/nerdcommenter'
 "Plugin 'matze/vim-tex-fold'
 "Plugin 'tpope/vim-fugitive'
-"Plugin 'lambdatoast/elm.vim'
 "Plugin 'jmcantrell/vim-virtualenv'
 
 call vundle#end()
@@ -83,9 +83,6 @@ autocmd BufNewFile,BufRead * setlocal formatoptions=cqj
 
 " copying and pasting
 set clipboard=unnamedplus  " use system clipboard for pasting
-
-" when a tab is closed, remove the buffer
-set nohidden
 
 " mouse
 set mouse=a             " enable mouse
@@ -173,11 +170,6 @@ set spellfile=~/.vim/spell/en.utf-8.add,~/.vim/spell/cs.utf-8.add
 " remap qq to escape from insert mode
 inoremap kj <Esc>
 
-" navigating through splits with CTRL+j/k/l/m
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 
 " make Y behave like other capitals, i.e. copy to the end of the line
 map Y y$
@@ -185,6 +177,25 @@ map Y y$
 " improve up/down movement on wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+
+" ==========================================================
+"  Buffers, tabs, splits
+" ==========================================================
+" When a tab is closed, remove the buffer.
+set nohidden
+
+" Open splits below and on the right.
+set splitbelow splitright
+
+" Navigating through splits with CTRL+j/k/l/m.
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Swap the splits.
+map <c-r> <c-w>r
 
 " ==========================================================
 "  Commands
@@ -256,6 +267,8 @@ let g:airline#extensions#branch#enabled = 1
 "  NerdTree
 " ==========================================================
 map <C-n> :NERDTreeToggle<CR>
+" C-h: go back from the split to the NerdTree (works for any vsplits)
+" q: close NERDTree
 
 " ==========================================================
 "  Syntastic
@@ -292,3 +305,13 @@ let g:UltiSnipsJumpForwardTrigger="<C-w>"
 let g:UltiSnipsJumpBackwardTrigger="<C-q>"
 let g:UltiSnipsListSnippets="<C-r>"  " works only in insert-mode
 let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
+
+" ==========================================================
+"  Comment/uncomment code
+" ==========================================================
+" Using Plugin 'preservim/nerdcommenter'
+" ,cl and ,cu
+
+" ==========================================================
+"  Unsorted and experimental
+" ==========================================================
