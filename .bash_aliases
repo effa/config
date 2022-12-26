@@ -54,3 +54,6 @@ alias download-mp3-playlist='youtube-dl --yes-playlist --extract-audio --audio-f
 alias download-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias edit-keyboard-layout="sudoedit /usr/share/X11/xkb/symbols/te"
 alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/config/xkb/"
+alias clean="for i in {1..55}; do echo; done"
+alias python="python3"
+alias py="python3"

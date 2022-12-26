@@ -194,8 +194,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Swap the splits.
-map <c-r> <c-w>r
+" Swap the splits (cannot use <c-r> = redo).
+map <c-s> <c-w>r
 
 " ==========================================================
 "  Commands

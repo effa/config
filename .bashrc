@@ -82,3 +82,6 @@ conda-init() {
   fi
   unset __conda_setup
 }
+
+# Needed temporarily, see https://jupyter-core.readthedocs.io/en/stable/changelog.html
+export JUPYTER_PLATFORM_DIRS=1
