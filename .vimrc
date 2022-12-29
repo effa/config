@@ -49,8 +49,11 @@ set noswapfile
 " show what is typing as a command
 set showcmd
 
-" Rebind <Leader> key
-let mapleader=","
+" Rebind <Leader> key, temporarily trying space instead of comma.
+" Make sure space doesn't have any mapping.
+nnoremap <space> <Nop>
+let mapleader=" "
+"let mapleader=","
 
 " indenting automatically
 set autoindent
@@ -196,6 +199,9 @@ map <c-h> <c-w>h
 
 " Swap the splits (cannot use <c-r> = redo).
 map <c-s> <c-w>r
+
+" Remap ctrl-w as I use it for closing terminal tabs.
+:nnoremap <leader>w <c-w>
 
 " ==========================================================
 "  Commands
