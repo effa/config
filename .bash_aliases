@@ -33,7 +33,7 @@ alias egrep='egrep --color=auto'
 
 # ls
 alias la='ls -A'  # list all
-alias ll='ls -alF'  # list all with details
+alias l='ls -AlhF'  # list all with details
 
 # Alert after a command is finnished. Usage: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
