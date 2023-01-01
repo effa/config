@@ -7,6 +7,7 @@ export PATH=$PATH:/home/tom/.local/bin
 # Vim as default editor.
 export EDITOR="vim"
 export VISUAL="vim"
+export PAGER="most"
 
 # Load bash aliases.
 if [ -f ~/.bash_aliases ]; then
