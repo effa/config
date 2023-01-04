@@ -88,6 +88,10 @@ Assuming KDE.
       ln -s ~/repos/config/colors.gpl ~/.config/inkscape/palettes/MyPalette.gpl
 
 
+* Install [bat](https://github.com/sharkdp/bat) and setup:
+
+      ln -s ~/repos/config/bat ~/.config/bat/config
+
 # Vim
 
 Random tips (also see .vimrc):

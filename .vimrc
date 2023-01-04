@@ -273,7 +273,7 @@ let g:airline#extensions#branch#enabled = 1
 " ==========================================================
 "  NerdTree
 " ==========================================================
-map <C-n> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR>
 " C-h: go back from the split to the NerdTree (works for any vsplits)
 " q: close NERDTree
 

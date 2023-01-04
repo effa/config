@@ -8,6 +8,7 @@ export PATH=$PATH:/home/tom/.local/bin
 export EDITOR="vim"
 export VISUAL="vim"
 export PAGER="most"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Load bash aliases.
 if [ -f ~/.bash_aliases ]; then

@@ -25,15 +25,25 @@ alias ssh-belos='ssh xeffenb1@belos.fi.muni.cz'
 alias ssh-al='ssh effa@al.thran.cz'
 alias ssh-umime='ssh umimetoorg@umimeto.org'
 
-# Color support of ls, grep, fgrep and egrep
+# Color support of ls, grep, fgrep and egrep.
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# ls
+# Navigation
 alias la='ls -A'  # list all
 alias l='ls -AlhF'  # list all with details
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Download
+alias download-mp3='youtube-dl --extract-audio --audio-format mp3'
+alias download-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias download-playlist='youtube-dl --yes-playlist --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
+# To download only a part of a playlist, continue partially downloaded, ignore
+# errors, no overwrites:
+# youtube-dl -ciw --playlist-items 37-75 --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s" .....
 
 # Alert after a command is finnished. Usage: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -47,11 +57,6 @@ alias pvc='latexmk -pvc'  # see .latexmkrc
 alias rmcrash='sudo rm /var/crash/*'
 alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
 alias lab='env PYTHONPATH=`pwd` jupyter lab'
-alias download-mp3='youtube-dl --extract-audio --audio-format mp3'
-alias download-mp3-playlist='youtube-dl --yes-playlist --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
-# Only part of playlist, continue partially downloaded, ignore errors, no overwrites:
-# youtube-dl -ciw --playlist-items 37-75 --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s" .....
-alias download-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias edit-keyboard-layout="sudoedit /usr/share/X11/xkb/symbols/te"
 alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/config/xkb/"
 alias clean="for i in {1..55}; do echo; done"
