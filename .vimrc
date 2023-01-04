@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'preservim/nerdcommenter'
+Plugin 'ervandew/supertab'
 "Plugin 'matze/vim-tex-fold'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'jmcantrell/vim-virtualenv'
@@ -317,6 +318,17 @@ let g:UltiSnipsSnippetDirectories=["my-snippets", "UltiSnips"]
 " ==========================================================
 " Using Plugin 'preservim/nerdcommenter'
 " ,cl and ,cu
+
+" ==========================================================
+"  Tab completion
+" ==========================================================
+" Using Plugin 'ervandew/supertab' to complete using tab.
+" Recognize when to complete paths, attribute access etc.
+let g:SuperTabDefaultCompletionType = "context"
+
+" Tab goes top to bottom, Shift-Tabe bottom to top.
+"let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " ==========================================================
 "  Unsorted and experimental
