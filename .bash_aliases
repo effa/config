@@ -62,3 +62,6 @@ alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/conf
 alias clean="for i in {1..55}; do echo; done"
 alias python="python3"
 alias py="python3"
+
+# Copy to primary clipboard.
+alias copy='xclip -selection clipboard'
