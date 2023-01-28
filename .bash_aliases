@@ -21,11 +21,13 @@ alias pc-restart-dpm="systemctl restart display-manager"
 
 # Remote access
 alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
-alias ssh-belos='ssh xeffenb1@belos.fi.muni.cz'
 alias ssh-al='ssh effa@al.thran.cz'
 alias ssh-umime='ssh umimetoorg@umimeto.org'
+alias mount-umime='\
+    sshfs -o default_permissions umimetoorg@umimeto.org:/home/umimetoorg/ ~/mnt/umime \
+    && cd ~/mnt/umime && pwd && ls'
 
-# Color support of ls, grep, fgrep and egrep.
+# Color support of ls, grep, fgrep and egrep
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
