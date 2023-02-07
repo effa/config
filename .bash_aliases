@@ -26,6 +26,7 @@ alias ssh-umime='ssh umimetoorg@umimeto.org'
 alias mount-umime='\
     sshfs -o default_permissions umimetoorg@umimeto.org:/home/umimetoorg/ ~/mnt/umime \
     && cd ~/mnt/umime && pwd && ls'
+alias cd-tomeff='cd ~/mnt/umime/ftp/umimefakta.cz/webroot/admxtrs/tomeff/'
 
 # Color support of ls, grep, fgrep and egrep
 alias ls='ls --color=auto'
@@ -50,20 +51,22 @@ alias download-playlist='youtube-dl --yes-playlist --extract-audio --audio-forma
 # Alert after a command is finnished. Usage: sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Python
+alias python="python3"
+alias py="python3"
+alias ve="source ./.venv/bin/activate"
+alias lab='env PYTHONPATH=`pwd` jupyter lab'
+alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
+
 # Other
 alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
 alias glog='git log --graph --oneline --decorate --all'
 alias audio-split='mp3splt -f -t 7.0 -o @f_@n -d parts'
 alias pdf='latexmk -pv'  # see .latexmkrc
 alias pvc='latexmk -pvc'  # see .latexmkrc
-alias rmcrash='sudo rm /var/crash/*'
-alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
-alias lab='env PYTHONPATH=`pwd` jupyter lab'
 alias edit-keyboard-layout="sudoedit /usr/share/X11/xkb/symbols/te"
 alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/config/xkb/"
 alias clean="for i in {1..55}; do echo; done"
-alias python="python3"
-alias py="python3"
 
 # Copy to primary clipboard.
 alias copy='xclip -selection clipboard'

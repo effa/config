@@ -55,6 +55,7 @@ PS1='\W$(__git_ps1 ":%s")\$ '
 #source virtualenvwrapper.sh
 
 scp-umime() { scp "$1" umimetoorg@umimeto.org:ftp/umimefakta.cz/webroot/admxtrs/tomeff; }
+scp-umime-lab() { scp "$1" umimetoorg@umimeto.org:ftp/umimefakta.cz/webroot/admxtrs/tomeff/labs; }
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -83,6 +84,17 @@ conda-init() {
       fi
   fi
   unset __conda_setup
+}
+
+workon-umitool() {
+  cd "/home/tom/repos/umime/umitool/source"
+  source .venv/bin/activate
+}
+
+
+workon-analysis() {
+  cd "/home/tom/repos/umime/analysis"
+  source .venv/bin/activate
 }
 
 # Needed temporarily, see https://jupyter-core.readthedocs.io/en/stable/changelog.html
