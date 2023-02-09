@@ -31,6 +31,14 @@ shopt -s globstar
 # e.g. !echo<space> expands to the last command starting with "echo"
 bind Space:magic-space
 
+# TAB completion:
+# Complete the first match, then cycle throug the others.
+bind "TAB:menu-complete"
+# But still show the list of all matches.
+bind "set show-all-if-ambiguous on"
+# First tab to only complete the common prefix.
+bind "set menu-complete-display-prefix on"
+
 # Enable bash completions (including git completions if available):
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then

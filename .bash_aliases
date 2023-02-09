@@ -56,6 +56,7 @@ alias python="python3"
 alias py="python3"
 alias ve="source ./.venv/bin/activate"
 alias lab='env PYTHONPATH=`pwd` jupyter lab'
+alias st-run='env PYTHONPATH=`pwd` streamlit run'
 alias colab="jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0"
 
 # Other
@@ -67,6 +68,7 @@ alias pvc='latexmk -pvc'  # see .latexmkrc
 alias edit-keyboard-layout="sudoedit /usr/share/X11/xkb/symbols/te"
 alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/config/xkb/"
 alias clean="for i in {1..55}; do echo; done"
+alias chrome="google-chrome"
 
 # Copy to primary clipboard.
 alias copy='xclip -selection clipboard'
