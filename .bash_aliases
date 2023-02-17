@@ -24,8 +24,11 @@ alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
 alias ssh-al='ssh effa@al.thran.cz'
 alias ssh-umime='ssh umimetoorg@umimeto.org'
 alias mount-umime='\
-    sshfs -o default_permissions umimetoorg@umimeto.org:/home/umimetoorg/ ~/mnt/umime \
-    && cd ~/mnt/umime && pwd && ls'
+    sshfs -o default_permissions umimetoorg@umimeto.org:/ ~/mnt/umime \
+    && cd ~/mnt/umime/home/umimetoorg && pwd && ls'
+#alias mount-umime-home='\
+#    sshfs -o default_permissions umimetoorg@umimeto.org:/home/umimetoorg/ ~/mnt/umime \
+#    && cd ~/mnt/umime && pwd && ls'
 alias cd-tomeff='cd ~/mnt/umime/ftp/umimefakta.cz/webroot/admxtrs/tomeff/'
 
 # Color support of ls, grep, fgrep and egrep

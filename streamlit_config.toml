@@ -1,0 +1,7 @@
+# ln -fs ~/repos/config/streamlit_config.toml .streamlit/config.toml
+[server]
+runOnSave = true
+
+[browser]
+serverAddress = 'localhost'
+gatherUsageStats = false
