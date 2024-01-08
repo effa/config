@@ -105,5 +105,19 @@ workon-analysis() {
   source .venv/bin/activate
 }
 
+
+workon-content() {
+  cd "/home/tom/repos/umime/content"
+  source .venv/bin/activate
+  # hack to make umistats available, better solution would be to insall it into the venv
+  export PYTHONPATH=/home/tom/repos/umime/analysis:$PYTHONPATH
+}
+
+
+#audio-length() {
+#  mp3info -p '%S\n' *.mp3 | awk '{s+=$1} END {printf"%d:%02d:%02d\n",s/3600,s%3600/60,s%3600%60}'
+#}
+
+
 # Needed temporarily, see https://jupyter-core.readthedocs.io/en/stable/changelog.html
 export JUPYTER_PLATFORM_DIRS=1

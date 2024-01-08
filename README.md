@@ -41,7 +41,7 @@ Assuming KDE.
 
 * Add custom keyboard layout:
 
-      sudo cp ~/repos/xkb/te /usr/share/X11/xkb/symbols/te
+      sudo cp ~/repos/config/xkb/te /usr/share/X11/xkb/symbols/te
 
 * Add the following lines to `/usr/share/X11/xkb/rules/evdev.xml`.
 

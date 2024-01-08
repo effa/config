@@ -44,6 +44,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Download
+alias youtube-dl='python3 /usr/local/bin/youtube-dl'
 alias download-mp3='youtube-dl --extract-audio --audio-format mp3'
 alias download-mp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias download-playlist='youtube-dl --yes-playlist --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
