@@ -31,6 +31,7 @@ Assuming KDE.
       ln -s ~/repos/config/.bash_aliases ~/.bash_aliases
       ln -s ~/repos/config/.bashrc ~/.bashrc
       ln -s ~/repos/config/.mostrc ~/.mostrc
+      ln -s ~/repos/config/.XCompose ~/.XCompose
 
 * Install vim:
 

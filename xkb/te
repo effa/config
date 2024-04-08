@@ -20,7 +20,7 @@ xkb_symbols "tom" {
     key <AE11>  { [ equal,        NoSymbol,     notequal,       variation             ] };
     key <AE12>  { [ dead_acute,   dead_caron,   dead_diaeresis, dead_macron           ] };
 
-    key <AD01>  { [ q,            Q,            grave,          NoSymbol              ] };
+    key <AD01>  { [ q,            Q,            grave,          Greeek_pi             ] };
     key <AD02>  { [ w,            W,            NoSymbol,       NoSymbol              ] };
     key <AD03>  { [ e,            E,            eacute,         Greek_epsilon         ] };
     key <AD04>  { [ r,            R,            NoSymbol,       NoSymbol              ] };
@@ -29,7 +29,7 @@ xkb_symbols "tom" {
     key <AD07>  { [ u,            U,            uring,          NoSymbol              ] };
     key <AD08>  { [ i,            I,            equal,          infinity              ] };
     key <AD09>  { [ o,            O,            numbersign,     oacute                ] };
-    key <AD10>  { [ p,            P,            plus,           Greeek_pi             ] };
+    key <AD10>  { [ p,            P,            plus,           U2212                 ] };
     key <AD11>  { [ bracketleft,  braceleft,    leftarrow,      downarrow             ] };
     key <AD12>  { [ bracketright, braceright,   rightarrow,     uparrow               ] };
 
@@ -59,7 +59,7 @@ xkb_symbols "tom" {
     key <AB10>  { [ minus,        underscore,   endash,         emdash                ] };
 
 
-    key <SPCE>  { [ space,        space,        underscore,     nobreakspace          ] };
+    key <SPCE>  { [ space,        space,        space,          nobreakspace          ] };
 
     // Remap Num_Lock to Caps_Lock.
     key <NMLK>  { [ Caps_Lock,   Caps_Lock,  Caps_Look,     Caps_Look                 ] };

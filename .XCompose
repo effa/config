@@ -1,0 +1,5 @@
+# import the default Compose file for your locale
+include "%L"
+
+<Multi_key> <bar> <greater>  : "▸"
+<Multi_key> <d> <e> <t>  : "<details> <summary></summary>  </details>"
