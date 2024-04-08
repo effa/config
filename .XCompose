@@ -1,5 +1,61 @@
 # import the default Compose file for your locale
 include "%L"
 
-<Multi_key> <bar> <greater>  : "▸"
-<Multi_key> <d> <e> <t>  : "<details> <summary></summary>  </details>"
+# Partially taken from /usr/share/X11/locale/en_US.UTF-8/Compose
+# and /usr/share/X11/locale/cs_CZ.UTF-8/Compose
+# <Multi_key> = Compose key = RightCtrl
+<Multi_key> <period> <minus>		: "·"	periodcentered # MIDDLE DOT
+<Multi_key> <period> <equal>		: "•"	enfilledcircbullet # bulletpoint
+<Multi_key> <bar> <greater>         : "▸"
+<Multi_key> <plus> <minus>		    : "±"	plusminus
+<Multi_key> <minus> <plus>		    : "±"	plusminus
+<Multi_key> <minus> <minus>         : "−" # skutecne minus
+<Multi_key> <percent> <o>		    : "‰"	U2030 # promile
+<Multi_key> <s> <s>			        : "ß"	ssharp # ostre S
+<Multi_key> <e> <equal>			    : "€"	EuroSign
+<Multi_key> <s> <o>			        : "§"	section # paragraf
+<Multi_key> <S> <o>			        : "§"	section # paragraf
+<Multi_key> <less> <3>			    : "♥"	U2665 # srdicko
+<Multi_key> <comma> <minus>		    : "¬"	notsign # negace
+<Multi_key> <1> <2>			        : "½"	onehalf # VULGAR FRACTION ONE HALF
+<Multi_key> <1> <3>			        : "⅓"
+<Multi_key> <1> <4>			        : "¼"	onequarter # VULGAR FRACTION ONE QUARTER
+<Multi_key> <3> <4>			        : "¾"	threequarters # VULGAR FRACTION THREE QUARTERS
+<Multi_key> <o> <slash>             : "∅"
+<Multi_key> <O> <slash>			    : "Ø"	Oslash # LATIN CAPITAL LETTER O WITH STROKE
+<Multi_key> <bar> <asciicircum>		: "↑"	U2191 # UPWARDS ARROW
+<Multi_key> <bar> <v>			    : "↓"	U2193 # DOWNWARDS ARROW
+<Multi_key> <minus> <greater>		: "→"	U2192 # RIGHTWARDS ARROW
+<Multi_key> <less> <minus> 	    : "←"
+<Multi_key> <less> <minus> <greater> :  "↔"
+<Multi_key> <less> <equal> <greater> :  "⇔"
+<Multi_key> <equal> <greater>		: "⇒"	U21D2 # RIGHTWARDS DOUBLE ARROW
+<Multi_key> <equal> <less>		    : "⇐"	U21D0 # LEFTWARDS DOUBLE ARROW
+<Multi_key> <E> <x>		            : "∃"
+<Multi_key> <slash> <E>		        : "∄"	U2204 # THERE DOES NOT EXIST
+<Multi_key> <slash> <equal>		    : "≠"	U2260 # NOT EQUAL TO
+<Multi_key> <exclam> <equal>		: "≠"	U2260 # NOT EQUAL TO
+<Multi_key> <less> <equal>		    : "≤"	U2264 # LESS-THAN OR EQUAL TO
+<Multi_key> <greater> <equal>		: "≥"	U2265 # GREATER-THAN OR EQUAL TO
+<Multi_key> <c> <underscore>	    : "⊆"   # podmnozina
+
+
+<dead_caron> <u>  : "ů"   U016F  # ˇ+u
+<dead_caron> <U>  : "Ů"   U016E  # ˇ+U
+
+# Snippets
+<Multi_key> <d> <e> <t> : "<details> <summary></summary>  </details>"
+
+
+# TODO:<Multi_key> : "↯"
+# TODO:<Multi_key> : "✓"
+# TODO:<Multi_key> : "★"
+# TODO:<Multi_key> : "∈"
+# TODO:<Multi_key> : "∉"
+# TODO:<Multi_key> : "∀"
+# TODO:<Multi_key> : "≈"
+# TODO:<Multi_key> : "∧"
+# TODO:<Multi_key> : "∨"
+# TODO:<Multi_key> mrkev, srdíčko, ...
+# TODO:<Multi_key> "Ahoj, Tom"
+# TODO:<Multi_key> <a> <l> <p> <h> <a>  : "α"
