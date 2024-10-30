@@ -17,8 +17,8 @@ include "%L"
 <Multi_key> <S> <o>			         : "§"	section # paragraf
 <Multi_key> <v> <slash>	             : "✓"        # fajfka
 <Multi_key> <d> <o> <n> <e>          : "✓"        # fajfka
-<Multi_key> <s> <q> <r> <t>	         : "√"        # odmocnina
-<Multi_key> <slash> <slash> <v>      : "↯"        # blesk, kontradikce
+<Multi_key> <X>  		             : "✗"	U2717 # krizek
+<Multi_key> <z> <z> <greater>        : "↯"        # blesk, kontradikce
 <Multi_key> <asterisk> <asterisk>    : "★"        # hvezdicka
 <Multi_key> <less> <3>			     : "♥"	U2665 # srdicko
 
@@ -34,9 +34,20 @@ include "%L"
 <Multi_key> <less> <equal> <greater> : "⇔"
 <Multi_key> <equal> <greater>		 : "⇒"	U21D2 # RIGHTWARDS DOUBLE ARROW
 
+# Tohle nefunguje, debug:
+<Multi_key> <Left> <Left>		: "←"	leftarrow	# LEFTWARDS ARROW
+<Multi_key> <Up> <Up>			: "↑"	uparrow		# UPWARDS ARROW
+<Multi_key> <Right> <Right>		: "→"	rightarrow	# RIGHTWARDS ARROW
+<Multi_key> <Down> <Down>		: "↓"	downarrow	# DOWNWARDS ARROW
+<Multi_key> <Left> <Right>		: "↔"	U2194       # LEFT RIGHT ARROW
+<Multi_key> <Right> <Left>		: "⇄"
+
+
 # MATH
 <Multi_key> <plus> <minus>		     : "±"	plusminus
 <Multi_key> <minus> <plus>		     : "±"	plusminus
+<Multi_key> <s> <q> <r> <t>	         : "√"        # odmocnina
+<Multi_key> <8> <8>			         : "∞"	U221e # infinity
 <Multi_key> <percent> <o>		     : "‰"	U2030 # promile
 <Multi_key> <1> <2>			         : "½"	onehalf # VULGAR FRACTION ONE HALF
 <Multi_key> <1> <3>			         : "⅓"
@@ -56,10 +67,16 @@ include "%L"
 <Multi_key> <less> <equal>		     : "≤"	U2264 # less-than or equal to
 <Multi_key> <greater> <equal>		 : "≥"	U2265 # greater-than or equal to
 <Multi_key> <c> <underscore>	     : "⊆"        # podmnozina
+<Multi_key> <C> <underscore>	     : "⊆"        # podmnozina
+<Multi_key> <c>             	     : "⊆"        # podmnozina
+<Multi_key> <C>             	     : "⊆"        # podmnozina
 <Multi_key> <a> <n> <d>              : "∧"        # logical and
 <Multi_key> <o> <r>                  : "∨"        # logical or
 <Multi_key> <n> <o> <t>              : "¬"        # logical or, negace
 <Multi_key> <comma> <minus>		     : "¬"	notsign # logical not, negace
+<Multi_key> <bar> <equal>		     : "⊨"	# vyplyvani, logicky dusledek
+<Multi_key> <s> <u>                  : "∪" U222A # set union
+<Multi_key> <s> <i>                  : "∩" U2229 # set intersection
 
 #SUBSCRIPTS
 <Multi_key> <_> <0> : "₀" U2080 # SUBSCRIPT 0
@@ -144,9 +161,10 @@ include "%L"
 <dead_caron> <u>  : "ů"   U016F  # ˇ+u
 <dead_caron> <U>  : "Ů"   U016E  # ˇ+U
 
+# Emoji test
+<Multi_key> <Multi_key> <w> <a> <i> <t>		: "⌛" U231B   # HOURGLASS
+<Multi_key> <Multi_key> <o> <k>             : "👍"    U1F44D # THUMBS UP SIGN
+
 # Snippets
 <Multi_key> <d> <e> <t> : "<details> <summary></summary>  </details>"
-
-
-# TODO:<Multi_key> mrkev, srdíčko, ...
-# TODO:<Multi_key> <a> <l> <p> <h> <a>  : "α"
+<Multi_key> <t> <o> <m> : "Ahoj,Tom"

@@ -21,8 +21,8 @@ alias pc-restart-dpm="systemctl restart display-manager"
 
 # Remote access
 alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
-alias ssh-al='ssh effa@al.thran.cz'
-alias ssh-umime='ssh umimetoorg@umimeto.org'
+alias ssh-al='ssh effa@robomise.cz'
+alias ssh-umime='ssh umimetoorg@gaga.umimeto.org'
 alias mount-umime='\
     sshfs -o default_permissions umimetoorg@umimeto.org:/ ~/mnt/umime \
     && cd ~/mnt/umime/home/umimetoorg && pwd && ls'

@@ -114,6 +114,12 @@ workon-content() {
 }
 
 
+workon-progressbar() {
+  cd "/home/tom/repos/progressbar"
+  source .venv/bin/activate
+}
+
+
 #audio-length() {
 #  mp3info -p '%S\n' *.mp3 | awk '{s+=$1} END {printf"%d:%02d:%02d\n",s/3600,s%3600/60,s%3600%60}'
 #}
