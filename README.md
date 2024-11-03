@@ -23,7 +23,7 @@ Assuming KDE.
       sudo apt update
       sudo apt install git
       mkdir repos; cd repos
-      git clone https://github.com/effa/config.git
+      git clone git@github.com:effa/config.git
       ln -s ~/repos/config/.gitconfig ~/.gitconfig
 
 * Make links to dotfiles:
