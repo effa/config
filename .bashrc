@@ -94,23 +94,17 @@ conda-init() {
   unset __conda_setup
 }
 
-workon-umitool() {
-  cd "/home/tom/repos/umime/umitool/source"
-  source .venv/bin/activate
-}
-
-
 workon-analysis() {
-  cd "/home/tom/repos/umime/analysis"
+  cd "/home/tom/repos/analysis"
   source .venv/bin/activate
 }
 
 
 workon-content() {
-  cd "/home/tom/repos/umime/content"
+  cd "/home/tom/repos/content"
   source .venv/bin/activate
-  # hack to make umistats available, better solution would be to insall it into the venv
-  export PYTHONPATH=/home/tom/repos/umime/analysis:$PYTHONPATH
+  # hack to make umistats available, better solution would be to install it into the venv
+  export PYTHONPATH=/home/tom/repos/analysis:$PYTHONPATH
 }
 
 
