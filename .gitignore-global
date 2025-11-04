@@ -12,6 +12,7 @@ temp/
 *.o
 *.obj
 .ipynb_checkpoints/
+__marimo__/
 
 # PDF-related
 *.dvi

@@ -24,7 +24,7 @@ alias ssh-aisa='ssh xeffenb1@aisa.fi.muni.cz'
 alias ssh-al='ssh effa@robomise.cz'
 alias ssh-umime='ssh umimetoorg@gaga.umimeto.org'
 alias mount-umime='\
-    sshfs -o default_permissions umimetoorg@umimeto.org:/ ~/mnt/umime \
+    sshfs -o default_permissions umimetoorg@gaga.umimeto.org:/ ~/mnt/umime \
     && cd ~/mnt/umime/home/umimetoorg && pwd && ls'
 #alias mount-umime-home='\
 #    sshfs -o default_permissions umimetoorg@umimeto.org:/home/umimetoorg/ ~/mnt/umime \
@@ -38,8 +38,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Navigation
-alias la='ls -A'  # list all
-alias l='ls -AlhF'  # list all with details
+alias la='ls -A'   # list all
+alias l='ls -AlhF' # list all with details
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -68,11 +68,16 @@ alias set-fi-time='sudo ntpdate -u time.fi.muni.cz'
 alias glog='git log --graph --oneline --decorate --all'
 alias audio-split='mp3splt -f -t 7.0 -o @f_@n -d parts'
 alias pdf='latexmk -pv'  # see .latexmkrc
-alias pvc='latexmk -pvc'  # see .latexmkrc
+alias pvc='latexmk -pvc' # see .latexmkrc
 alias edit-keyboard-layout="sudoedit /usr/share/X11/xkb/symbols/te"
 alias backup-keyboard-layout="sudo cp /usr/share/X11/xkb/symbols/te ~/repos/config/xkb/"
 alias clean="for i in {1..55}; do echo; done"
 alias chrome="google-chrome"
+alias textopath='for f in *.svg; do inkscape $f -o export/$f --export-text-to-path; done'
+alias nv="nvim"
+#alias e="nvim"
+alias e="uv run nvim"
+alias bat="batcat --theme='Solarized (light)'"
 
 # Copy to primary clipboard.
 alias copy='xclip -selection clipboard'

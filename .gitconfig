@@ -10,3 +10,5 @@
 	helper = cache
 [merge]
 	conflictstyle = diff3
+[pull]
+	rebase = true
